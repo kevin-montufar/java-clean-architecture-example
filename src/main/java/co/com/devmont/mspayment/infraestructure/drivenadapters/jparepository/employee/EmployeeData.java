@@ -25,11 +25,12 @@ public class EmployeeData {
     @Column(name = "contract_type")
     private Long contractTypeId;
 
+    @Column(name = "date_of_ingress")
     private LocalDate dateOfIngress;
-
-    private BigDecimal salary;
 
     @ManyToOne()
     @JoinColumn(name="contract_type", insertable = false, updatable = false)
     private ContractTypeData contractType;
+
+    private BigDecimal salary;
 }

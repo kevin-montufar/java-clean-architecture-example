@@ -15,9 +15,6 @@ public class PaymentUseCase {
     private final ContractTypeRepository contractTypeRepository;
 
     public Employee saveEmployee(Employee employee) {
-        ContractType contractType = contractTypeRepository.save(ContractType.builder().type("FULL").build());
-        System.out.println(contractType.getType());
-        employee.setContractTypeId(contractType.getId());
         return employeeRepository.saveEmployee(employee);
     }
 
