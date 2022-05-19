@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employee;
+package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees;
 
 import co.com.devmont.mspayment.domain.model.employee.Employee;
 import co.com.devmont.mspayment.domain.model.employee.EmployeeRepository;
@@ -11,6 +11,7 @@ import java.util.List;
 @Repository
 public class EmployeeRepositoryAdapter extends AdapterOperations<Employee, EmployeeData, Long, EmployeeDataRepository>
         implements EmployeeRepository {
+
 
 
     public EmployeeRepositoryAdapter(EmployeeDataRepository repository, ObjectMapper mapper) {

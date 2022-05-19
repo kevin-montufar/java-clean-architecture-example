@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employee;
+package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.QueryByExampleExecutor;

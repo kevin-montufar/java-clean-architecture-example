@@ -1,7 +1,7 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttype;
+package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttypes;
 
 
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employee.EmployeeData;
+import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees.EmployeeData;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,8 +15,8 @@ import java.util.List;
 public class ContractTypeData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, unique = true)
-    private Long id;
+    @Column(name = "contract_type_id", nullable = false, unique = true)
+    private Long contractTypeId;
 
     @Column(length = 50)
     private String type;

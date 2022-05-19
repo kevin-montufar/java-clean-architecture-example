@@ -1,18 +1,15 @@
-package co.com.devmont.mspayment.domain.usecase;
+package co.com.devmont.mspayment.domain.usecase.employee;
 
 import co.com.devmont.mspayment.domain.model.employee.Employee;
 import co.com.devmont.mspayment.domain.model.employee.EmployeeRepository;
-import co.com.devmont.mspayment.domain.model.type.ContractType;
-import co.com.devmont.mspayment.domain.model.type.ContractTypeRepository;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
 
 @AllArgsConstructor
-public class PaymentUseCase {
+public class EmployeeUseCase {
 
     private final EmployeeRepository employeeRepository;
-    private final ContractTypeRepository contractTypeRepository;
 
     public Employee saveEmployee(Employee employee) {
         return employeeRepository.saveEmployee(employee);

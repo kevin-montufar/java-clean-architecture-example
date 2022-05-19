@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttype;
+package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttypes;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.QueryByExampleExecutor;

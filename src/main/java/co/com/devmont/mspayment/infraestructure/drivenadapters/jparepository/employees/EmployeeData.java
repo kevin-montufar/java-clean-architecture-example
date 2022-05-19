@@ -1,7 +1,7 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employee;
+package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees;
 
 
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttype.ContractTypeData;
+import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttypes.ContractTypeData;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,8 +16,8 @@ import java.time.LocalDate;
 public class EmployeeData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, unique = true)
-    private Long id;
+    @Column(name = "employee_id", nullable = false, unique = true)
+    private Long employeeId;
 
     @Column(length = 50)
     private String name;

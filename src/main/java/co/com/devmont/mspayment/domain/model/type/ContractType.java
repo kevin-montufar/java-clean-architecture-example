@@ -13,5 +13,4 @@ import java.util.List;
 public class ContractType {
     private Long id;
     private String type;
-    private List<Employee> employeeDataList;
 }

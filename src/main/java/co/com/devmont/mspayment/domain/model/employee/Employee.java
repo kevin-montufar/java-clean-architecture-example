@@ -21,6 +21,4 @@ public class Employee {
     private BigDecimal salary;
 
     private Long contractTypeId;
-
-    private ContractType contractType;
 }

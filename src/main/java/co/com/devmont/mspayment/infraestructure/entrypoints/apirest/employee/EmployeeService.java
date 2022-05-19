@@ -1,7 +1,7 @@
-package co.com.devmont.mspayment.infraestructure.entrypoints.apirest;
+package co.com.devmont.mspayment.infraestructure.entrypoints.apirest.employee;
 
 import co.com.devmont.mspayment.domain.model.employee.Employee;
-import co.com.devmont.mspayment.domain.usecase.PaymentUseCase;
+import co.com.devmont.mspayment.domain.usecase.employee.EmployeeUseCase;
 import co.com.devmont.mspayment.infraestructure.entrypoints.model.ResponseModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -20,7 +20,7 @@ public class EmployeeService {
     /**
      * Use case of employees
      */
-    private final PaymentUseCase paymentUseCase;
+    private final EmployeeUseCase employeeUseCase;
 
     /**
      * Save or update an employee (Create and Update operations letter "C" and "U" of CRUD acronym)
@@ -29,7 +29,7 @@ public class EmployeeService {
      */
     @PostMapping("/save")
     public ResponseEntity<ResponseModel> saveEmployee(@RequestBody Employee employee) {
-        Employee employeeSaved = paymentUseCase.saveEmployee(employee);
+        Employee employeeSaved = employeeUseCase.saveEmployee(employee);
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(employeeSaved).build(),
                 new HttpHeaders(),
@@ -43,7 +43,7 @@ public class EmployeeService {
      */
     @GetMapping("/list")
     public ResponseEntity<ResponseModel> getEmployees() {
-        List<Employee> employees = paymentUseCase.getEmployees();
+        List<Employee> employees = employeeUseCase.getEmployees();
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(employees).build(),
                 new HttpHeaders(),
@@ -58,7 +58,7 @@ public class EmployeeService {
      */
     @GetMapping("/find/{code}")
     public ResponseEntity<ResponseModel> getEmployee(@PathVariable("code") Long code) {
-        Employee employee = paymentUseCase.getEmployeeByCode(code);
+        Employee employee = employeeUseCase.getEmployeeByCode(code);
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(employee).build(),
                 new HttpHeaders(),
@@ -68,7 +68,7 @@ public class EmployeeService {
 
     @DeleteMapping("/delete")
     public ResponseEntity<ResponseModel> deleteEmployee(@RequestBody Employee employee) {
-        paymentUseCase.deleteEmployee(employee);
+        employeeUseCase.deleteEmployee(employee);
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(employee).build(),
                 new HttpHeaders(),
