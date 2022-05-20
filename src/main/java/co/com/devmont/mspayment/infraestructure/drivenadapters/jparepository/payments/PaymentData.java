@@ -28,8 +28,8 @@ public class PaymentData {
     @Column(name = "payment_value")
     private BigDecimal paymentValue;
 
-    @Column(name = "number_of_days")
-    private Integer numberOfDays;
+    @Column(name = "days_worked")
+    private Integer daysWorked;
 
     @ManyToOne()
     @JoinColumn(name="employee_id", insertable = false, updatable = false)

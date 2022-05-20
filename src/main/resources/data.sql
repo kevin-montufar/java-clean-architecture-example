@@ -21,7 +21,7 @@ create table payments
     employee_id     bigint,
     date_of_payment date,
     payment_value   numeric(19, 2),
-    number_of_days  integer,
+    days_worked  integer,
     primary key (payment_id)
 );
 
@@ -55,5 +55,5 @@ values (1, '2022-04-21', 'User Three', 20000000);
 
 ------------------------------------ Payments Insert ------------------------------------
 
-insert into payments(employee_id, date_of_payment, payment_value, number_of_days)
+insert into payments(employee_id, date_of_payment, payment_value, days_worked)
 values (1, '2022-05-21', 20000000, 30);

@@ -1,6 +1,5 @@
 package co.com.devmont.mspayment.domain.model.employee;
 
-import co.com.devmont.mspayment.domain.model.type.ContractType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

@@ -19,5 +19,5 @@ public class Payment {
 
     private BigDecimal paymentValue;
 
-    private Integer numberOfDays;
+    private Integer daysWorked;
 }

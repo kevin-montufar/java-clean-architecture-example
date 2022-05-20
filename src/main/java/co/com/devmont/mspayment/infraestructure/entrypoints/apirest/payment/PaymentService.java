@@ -23,21 +23,6 @@ public class PaymentService {
     private final PaymentUseCase paymentUseCase;
 
     /**
-     * Save or update a payment (Create and Update operations letter "C" and "U" of CRUD acronym)
-     * @param payment Payment to save or update when employee has id present
-     * @return Payment saved
-     */
-    @PostMapping("/save")
-    public ResponseEntity<ResponseModel> savePayment(@RequestBody Payment payment) {
-        Payment paymentSaved = paymentUseCase.savePayment(payment);
-        return new ResponseEntity<>(
-                ResponseModel.builder().meta(HttpStatus.OK).data(paymentSaved).build(),
-                new HttpHeaders(),
-                HttpStatus.OK
-        );
-    }
-
-    /**
      * Find all payments (Read operation letter "R" of CRUD acronym)
      * @return List of payments
      */
@@ -66,4 +51,18 @@ public class PaymentService {
         );
     }
 
+    /**
+     * Save or update a payment (Create and Update operations letter "C" and "U" of CRUD acronym)
+     * @param payment Payment to save or update when employee has id present
+     * @return Payment saved
+     */
+    @PostMapping("/save")
+    public ResponseEntity<ResponseModel> savePayment(@RequestBody Payment payment) {
+        Payment paymentSaved = paymentUseCase.savePayment(payment);
+        return new ResponseEntity<>(
+                ResponseModel.builder().meta(HttpStatus.OK).data(paymentSaved).build(),
+                new HttpHeaders(),
+                HttpStatus.OK
+        );
+    }
 }
