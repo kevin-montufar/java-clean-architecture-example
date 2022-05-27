@@ -1,7 +1,7 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttypes;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.contracttypes;
 
 
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees.EmployeeData;
+import co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.employees.EmployeeData;
 import lombok.Getter;
 import lombok.Setter;
 

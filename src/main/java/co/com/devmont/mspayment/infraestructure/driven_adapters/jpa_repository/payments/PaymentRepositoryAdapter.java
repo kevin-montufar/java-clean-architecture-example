@@ -1,8 +1,8 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.payments;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.payments;
 
 import co.com.devmont.mspayment.domain.model.payment.Payment;
 import co.com.devmont.mspayment.domain.model.payment.PaymentRepository;
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.helper.AdapterOperations;
+import co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 

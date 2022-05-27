@@ -1,8 +1,8 @@
-package co.com.devmont.mspayment.infraestructure.entrypoints.apirest.employee;
+package co.com.devmont.mspayment.infraestructure.entry_points.apirest.employee;
 
 import co.com.devmont.mspayment.domain.model.employee.Employee;
 import co.com.devmont.mspayment.domain.usecase.employee.EmployeeUseCase;
-import co.com.devmont.mspayment.infraestructure.entrypoints.model.ResponseModel;
+import co.com.devmont.mspayment.infraestructure.entry_points.model.ResponseModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

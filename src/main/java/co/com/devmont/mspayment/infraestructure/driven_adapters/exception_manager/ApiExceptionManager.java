@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.exceptionmanager;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.exception_manager;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

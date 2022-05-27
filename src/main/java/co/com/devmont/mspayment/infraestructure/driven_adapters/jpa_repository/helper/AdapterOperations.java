@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.helper;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.helper;
 
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.repository.CrudRepository;

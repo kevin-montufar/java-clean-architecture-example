@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.payments;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.payments;
 
 
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees.EmployeeData;
+import co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.employees.EmployeeData;
 
 @Setter
 @Getter

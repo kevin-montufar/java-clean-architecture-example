@@ -1,8 +1,8 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.contracttypes;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.contracttypes;
 
 import co.com.devmont.mspayment.domain.model.type.ContractType;
 import co.com.devmont.mspayment.domain.model.type.ContractTypeRepository;
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.helper.AdapterOperations;
+import co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +14,8 @@ public class ContractTypeDataRepositoryAdapter extends AdapterOperations<Contrac
         super(repository, mapper, d -> mapper.mapBuilder(d, ContractType.ContractTypeBuilder.class).build());
     }
 
+    @Override
+    public ContractType findById(Long id) {
+        return super.findById(id);
+    }
 }

@@ -1,8 +1,8 @@
-package co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.employees;
+package co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.employees;
 
 import co.com.devmont.mspayment.domain.model.employee.Employee;
 import co.com.devmont.mspayment.domain.model.employee.EmployeeRepository;
-import co.com.devmont.mspayment.infraestructure.drivenadapters.jparepository.helper.AdapterOperations;
+import co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 

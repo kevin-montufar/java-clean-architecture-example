@@ -1,4 +1,4 @@
-package co.com.devmont.mspayment.infraestructure.entrypoints.model;
+package co.com.devmont.mspayment.infraestructure.entry_points.model;
 
 import lombok.Builder;
 import lombok.Getter;
