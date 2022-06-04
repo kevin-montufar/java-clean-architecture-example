@@ -41,8 +41,8 @@ public class PaymentService {
      * @param employeeId Employee id
      * @return employee payments list
      */
-    @GetMapping("/listByEmployeeId")
-    public ResponseEntity<ResponseModel> getEmployees(@RequestParam Long employeeId) {
+    @GetMapping("/listByEmployee/{id}")
+    public ResponseEntity<ResponseModel> getPaymentsByEmployee(@PathVariable("id") Long employeeId) {
         List<Payment> payments = paymentUseCase.findPaymentsByEmployee(employeeId);
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(payments).build(),
@@ -53,12 +53,12 @@ public class PaymentService {
 
     /**
      * Save or update a payment (Create and Update operations letter "C" and "U" of CRUD acronym)
-     * @param employeeId Payment to save or update when employee has id present
+     * @param payment Payment to save or update when employee has id present
      * @return Payment saved
      */
     @PostMapping("/save")
-    public ResponseEntity<ResponseModel> savePayment(@RequestBody Long employeeId) {
-        Payment paymentSaved = paymentUseCase.savePayment(employeeId);
+    public ResponseEntity<ResponseModel> savePayment(@RequestBody Payment payment) {
+        Payment paymentSaved = paymentUseCase.savePayment(payment);
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(paymentSaved).build(),
                 new HttpHeaders(),

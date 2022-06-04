@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Setter
 @Builder(toBuilder = true)
 public class Employee {
-    private Long id;
+    private Long employeeId;
 
     private String name;
 

@@ -33,7 +33,7 @@ public class EmployeeRepositoryAdapter extends AdapterOperations<Employee, Emplo
 
     @Override
     public void deleteEmployee(Employee employee) {
-        repository.deleteById(employee.getId());
+        repository.deleteById(employee.getEmployeeId());
     }
 
 }

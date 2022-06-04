@@ -6,6 +6,7 @@ import co.com.devmont.mspayment.domain.model.payment.Payment;
 import co.com.devmont.mspayment.domain.model.payment.PaymentRepository;
 import co.com.devmont.mspayment.domain.model.type.ContractType;
 import co.com.devmont.mspayment.domain.model.type.ContractTypeRepository;
+import co.com.devmont.mspayment.domain.usecase.util.PaymentUtilities;
 import lombok.AllArgsConstructor;
 
 import java.math.BigDecimal;
@@ -19,9 +20,9 @@ public class PaymentUseCase {
     private final PaymentRepository paymentRepository;
 
 
-    public Payment savePayment(Long employeeId) {
+    public Payment savePayment(Payment payment) {
 
-        Employee employee = employeeRepository.findEmployeeByCode(employeeId);
+        Employee employee = employeeRepository.findEmployeeByCode(payment.getEmployeeId());
         if (employee == null) {
             // throw exception
         }
@@ -30,15 +31,14 @@ public class PaymentUseCase {
         if (contractType == null) {
             // throw exception
         }
-        int daysWorked = (contractType.getType().equals("FULL")) ? 30 : 20;
-        BigDecimal salary = employee.getSalary().multiply(BigDecimal.valueOf(daysWorked));
 
-        Payment payment = Payment.builder()
-                .employeeId(employeeId)
-                .daysWorked(daysWorked)
-                .dateOfPayment(LocalDate.now())
-                .paymentValue(salary)
-                .build();
+        payment.setPaymentValue(PaymentUtilities.calculateSalary(
+                employee.getSalary(),
+                contractType.getType(),
+                payment.getLeaveDays(),
+                payment.getMedicalDisability())
+        );
+        payment.setDateOfPayment(LocalDate.now());
 
         return paymentRepository.savePayment(payment);
     }

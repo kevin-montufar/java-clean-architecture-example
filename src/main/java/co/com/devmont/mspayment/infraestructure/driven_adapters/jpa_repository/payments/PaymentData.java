@@ -28,8 +28,11 @@ public class PaymentData {
     @Column(name = "payment_value")
     private BigDecimal paymentValue;
 
-    @Column(name = "days_worked")
-    private Integer daysWorked;
+    @Column(name = "leave_days")
+    private Integer leaveDays;
+
+    @Column(name = "medical_disability")
+    private Integer medicalDisability;
 
     @ManyToOne()
     @JoinColumn(name="employee_id", insertable = false, updatable = false)

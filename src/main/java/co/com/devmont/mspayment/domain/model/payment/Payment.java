@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -19,5 +20,7 @@ public class Payment {
 
     private BigDecimal paymentValue;
 
-    private Integer daysWorked;
+    private Integer leaveDays;
+
+    private Integer medicalDisability;
 }

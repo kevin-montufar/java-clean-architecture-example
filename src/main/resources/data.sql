@@ -21,7 +21,8 @@ create table payments
     employee_id     bigint,
     date_of_payment date,
     payment_value   numeric(19, 2),
-    days_worked  integer,
+    leave_days  integer,
+    medical_disability  integer,
     primary key (payment_id)
 );
 
@@ -44,7 +45,7 @@ values ('PARTIAL');
 ------------------------------------ Employees Insert ------------------------------------
 
 insert into employees(contract_type, date_of_ingress, name, salary)
-values (1, '2022-05-09', 'User One', 20000000);
+values (1, '2022-05-09', 'User One', 10000000);
 
 insert into employees(contract_type, date_of_ingress, name, salary)
 values (2, '2022-04-20', 'User Two', 20000000);
@@ -55,5 +56,5 @@ values (1, '2022-04-21', 'User Three', 20000000);
 
 ------------------------------------ Payments Insert ------------------------------------
 
-insert into payments(employee_id, date_of_payment, payment_value, days_worked)
-values (1, '2022-05-21', 20000000, 30);
+insert into payments(employee_id, date_of_payment, payment_value, leave_days, medical_disability)
+values (1, '2022-05-21', 10000000, 0, 0);
