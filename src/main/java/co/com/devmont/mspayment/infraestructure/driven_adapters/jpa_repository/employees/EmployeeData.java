@@ -16,8 +16,8 @@ import java.time.LocalDate;
 public class EmployeeData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "employee_id", nullable = false, unique = true)
-    private Long employeeId;
+    @Column(name = "id", nullable = false, unique = true)
+    private Long id;
 
     @Column(length = 50)
     private String name;

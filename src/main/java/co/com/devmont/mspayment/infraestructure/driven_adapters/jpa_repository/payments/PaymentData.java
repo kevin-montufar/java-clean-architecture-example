@@ -16,7 +16,7 @@ import co.com.devmont.mspayment.infraestructure.driven_adapters.jpa_repository.e
 public class PaymentData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "payment_id", nullable = false, unique = true)
+    @Column(name = "id", nullable = false, unique = true)
     private Long id;
 
     @Column(name = "employee_id")
@@ -35,7 +35,7 @@ public class PaymentData {
     private Integer medicalDisability;
 
     @ManyToOne()
-    @JoinColumn(name="employee_id", insertable = false, updatable = false)
+    @JoinColumn(name="id", insertable = false, updatable = false)
     private EmployeeData employeeData;
 
 }

@@ -24,6 +24,7 @@ public class EmployeeService {
 
     /**
      * Save or update an employee (Create and Update operations letter "C" and "U" of CRUD acronym)
+     *
      * @param employee Employee to save or update when employee has id present
      * @return employee saved
      */
@@ -39,6 +40,7 @@ public class EmployeeService {
 
     /**
      * Find all employees (Read operation letter "R" of CRUD acronym)
+     *
      * @return List of employees
      */
     @GetMapping("/list")
@@ -53,6 +55,7 @@ public class EmployeeService {
 
     /**
      * Find a specific employee by code (Read operation letter "R" of CRUD acronym)
+     *
      * @param code code employee - identification number
      * @return Employee found
      */
