@@ -20,7 +20,7 @@ public class EmployeeUseCase {
     }
 
     public Employee getEmployeeByCode(Long code) {
-        return employeeRepository.findEmployeeByCode(code);
+        return employeeRepository.findEmployeeById(code);
     }
 
     public void deleteEmployee(Employee employee) {

@@ -1,7 +1,6 @@
 package co.com.devmont.mspayment.domain.usecase.util;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 public class PaymentUtilities {
 
@@ -12,13 +11,13 @@ public class PaymentUtilities {
             Integer medicalDisability
     ) {
         BigDecimal dailySalary = completeSalary.divide(
-                BigDecimal.valueOf(getDaysWorkedByContractType(contractType)), 2, RoundingMode.HALF_UP
+                BigDecimal.valueOf(getDaysWorkedByContractType(contractType)), 0, BigDecimal.ROUND_UP
         );
         int daysWorked = getDaysWorkedByContractType(contractType) - leaveDays - medicalDisability;
         return dailySalary.multiply(BigDecimal.valueOf(daysWorked));
     }
 
     private static int getDaysWorkedByContractType(String contractType) {
-        return contractType.equals("FULL") ? 30 : 20;
+        return contractType.equals("FULL") ? 30 : 15;
     }
 }

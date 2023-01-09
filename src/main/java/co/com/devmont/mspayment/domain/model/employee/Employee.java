@@ -28,5 +28,4 @@ public class Employee {
 
     @JsonProperty("contract_type_id")
     private Long contractTypeId;
-
 }

@@ -35,7 +35,6 @@ public class PaymentData {
     private Integer medicalDisability;
 
     @ManyToOne()
-    @JoinColumn(name="id", insertable = false, updatable = false)
+    @JoinColumn(name="employee_id", insertable = false, updatable = false)
     private EmployeeData employeeData;
-
 }

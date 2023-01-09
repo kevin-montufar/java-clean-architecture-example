@@ -9,7 +9,6 @@ import co.com.devmont.mspayment.domain.model.type.ContractTypeRepository;
 import co.com.devmont.mspayment.domain.usecase.util.PaymentUtilities;
 import lombok.AllArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class PaymentUseCase {
 
     public Payment savePayment(Payment payment) {
 
-        Employee employee = employeeRepository.findEmployeeByCode(payment.getEmployeeId());
+        Employee employee = employeeRepository.findEmployeeById(payment.getEmployeeId());
         if (employee == null) {
             // throw exception
         }

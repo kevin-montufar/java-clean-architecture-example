@@ -12,12 +12,9 @@ import java.util.List;
 public class PaymentRepositoryAdapter extends AdapterOperations<Payment, PaymentData, Long, PaymentDataRepository>
         implements PaymentRepository {
 
-
-
     public PaymentRepositoryAdapter(PaymentDataRepository repository, ObjectMapper mapper) {
         super(repository, mapper, d -> mapper.mapBuilder(d, Payment.PaymentBuilder.class).build());
     }
-
 
     @Override
     public Payment savePayment(Payment payment) {
@@ -26,7 +23,7 @@ public class PaymentRepositoryAdapter extends AdapterOperations<Payment, Payment
 
     @Override
     public List<Payment> listPaymentsByEmployee(Long employeeId) {
-        return super.toList(repository.findPaymentDataByEmployeeId(employeeId));
+        return super.toList(repository.findByEmployeeId(employeeId));
     }
 
     @Override

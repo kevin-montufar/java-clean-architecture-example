@@ -27,13 +27,13 @@ public class EmployeeRepositoryAdapter extends AdapterOperations<Employee, Emplo
     }
 
     @Override
-    public Employee findEmployeeByCode(Long code) {
-        return super.findById(code);
+    public Employee findEmployeeById(Long id) {
+        return super.findById(id);
     }
 
     @Override
     public void deleteEmployee(Employee employee) {
-        repository.deleteById(employee.getEmployeeId());
+        repository.deleteById(employee.getId());
     }
 
 }

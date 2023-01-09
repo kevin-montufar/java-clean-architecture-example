@@ -16,7 +16,7 @@ public class ContractTypeData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "contract_type_id", nullable = false, unique = true)
-    private Long contractTypeId;
+    private Long id;
 
     @Column(length = 50)
     private String type;
