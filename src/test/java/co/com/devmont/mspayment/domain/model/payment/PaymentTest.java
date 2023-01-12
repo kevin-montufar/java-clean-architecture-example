@@ -19,7 +19,8 @@ class PaymentTest {
                 employeeId(1L).
                 dateOfPayment(LocalDate.of(2022,5, 15)).
                 paymentValue(BigDecimal.valueOf(200000)).
-                daysWorked(30).
+                medicalDisability(0).
+                leaveDays(0).
                 build();
     }
 
@@ -41,11 +42,6 @@ class PaymentTest {
     @Test
     void getPaymentValue() {
         assertEquals(BigDecimal.valueOf(200000), payment.getPaymentValue());
-    }
-
-    @Test
-    void getDaysWorked() {
-        assertEquals(30, payment.getDaysWorked());
     }
 
     @Test
@@ -72,9 +68,4 @@ class PaymentTest {
         assertEquals(BigDecimal.valueOf(500000), payment.getPaymentValue());
     }
 
-    @Test
-    void setDaysWorked() {
-        payment.setDaysWorked(15);
-        assertEquals(15, payment.getDaysWorked());
-    }
 }

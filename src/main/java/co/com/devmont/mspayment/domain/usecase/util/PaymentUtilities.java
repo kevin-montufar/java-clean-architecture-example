@@ -4,12 +4,7 @@ import java.math.BigDecimal;
 
 public class PaymentUtilities {
 
-    public static BigDecimal calculateSalary(
-            BigDecimal completeSalary,
-            String contractType,
-            Integer leaveDays,
-            Integer medicalDisability
-    ) {
+    public static BigDecimal calculateSalary(BigDecimal completeSalary, String contractType, Integer leaveDays, Integer medicalDisability) {
         BigDecimal dailySalary = completeSalary.divide(
                 BigDecimal.valueOf(getDaysWorkedByContractType(contractType)), 0, BigDecimal.ROUND_UP
         );
