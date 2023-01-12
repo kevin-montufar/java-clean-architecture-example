@@ -61,7 +61,7 @@ public class EmployeeService {
      */
     @GetMapping("/find/{code}")
     public ResponseEntity<ResponseModel> getEmployee(@PathVariable("code") Long code) {
-        Employee employee = employeeUseCase.getEmployeeByCode(code);
+        Employee employee = employeeUseCase.getEmployeeById(code);
         return new ResponseEntity<>(
                 ResponseModel.builder().meta(HttpStatus.OK).data(employee).build(),
                 new HttpHeaders(),

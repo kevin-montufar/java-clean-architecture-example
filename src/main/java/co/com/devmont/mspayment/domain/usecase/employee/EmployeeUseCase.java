@@ -19,11 +19,12 @@ public class EmployeeUseCase {
         return employeeRepository.listEmployees();
     }
 
-    public Employee getEmployeeByCode(Long code) {
+    public Employee getEmployeeById(Long code) {
         return employeeRepository.findEmployeeById(code);
     }
 
     public void deleteEmployee(Employee employee) {
         employeeRepository.deleteEmployee(employee);
     }
+
 }
